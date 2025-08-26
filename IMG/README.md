@@ -1,1 +1,1 @@
-# DesignMaker
+# Carpeta exclusiva para imágenes, priorizar el png siempre que se pueda, los diseños aquí cargados están propensos a modificar y la forma de nombrarlos será "nombreFotoColor" sin excepción

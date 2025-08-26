@@ -1,1 +1,1 @@
-# DesignMaker
+# Carpeta exclusiva para scripts en JS, los archivos aquí cargados poseerán el nombre según la función de la siguiente forma "funcionSeccionReferencia" siendo la referencia el uso o la intención que dicho script tenga
