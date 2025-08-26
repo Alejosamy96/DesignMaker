@@ -3,49 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lowe Design Studio</title>
-  <link rel="stylesheet" href="Styles.css">
+  <title>Banner curvo con líneas</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      position: relative;
+      background: #000000;
+      color: white;
+      text-align: center;
+      padding: 100px 20px 150px; /* espacio para las curvas */
+      overflow: hidden;
+    }
+
+    .banner h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .banner p {
+      font-size: 1.2rem;
+    }
+
+    .wave-lines {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 180px; /* altura de la curva */
+      overflow: hidden;
+    }
+
+    .wave-lines svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  </style>
 </head>
 <body>
-
-  <!-- HEADER -->
-  <header>
-    <h1>LOWE DESIGN STUDIO</h1>
-    <a href="https://wa.me/" class="whatsapp-btn">💬 ¿Chateamos?</a>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero">
-    <h2>Tú marca merece más que estar en un aviso.</h2>
-    <p>En 48 horas te entregamos un manual de marca express, con aplicaciones reales de tu logo, colores y maquetas listas para usar. Sin cambiar tu logo. Solo potenciando tu marca.</p>
-    <a href="#" class="cta-btn">Compra Ahora</a>
-  </section>
-
-  <!-- FEATURES -->
-  <section class="features">
-    <div>
-      <span>🏅</span>
-      En el 2024 Diseñamos más de 500 marcas
-    </div>
-    <div>
-      <span>⭐</span>
-      Calificación 5 estrellas por nuestros clientes
+  <section class="banner">
+    <div class="wave-lines">
+      <svg viewBox="0 0 500 250" xmlns="http://www.w3.org/2000/svg" fill="none" preserveAspectRatio="none">
+        <!-- Curvas blancas adaptables -->
+        <path d="M0 150 Q250 0 500 150" stroke="white" stroke-width="1" fill="none"/>
+        <path d="M0 180 Q250 80 500 180" stroke="white" stroke-width="1" fill="none"/>
+        <path d="M0 210 Q250 110 500 210" stroke="white" stroke-width="1" fill="none"/>
+      </svg>
     </div>
   </section>
-
-  <!-- BRAND SHOWCASE -->
-  <section class="brand-showcase">
-    <img src="https://via.placeholder.com/150" alt="Logo ejemplo">
-  </section>
-
-  <!-- PLAY BUTTON -->
-  <div class="play-btn">▶</div>
-
-  <!-- TESTIMONIOS -->
-  <section class="testimonials">
-    <h3>TESTIMONIALES</h3>
-    <p>Aquí van los comentarios de clientes satisfechos...</p>
-  </section>
-
 </body>
 </html>
