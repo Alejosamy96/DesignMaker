@@ -14,7 +14,7 @@ body{
 .encabezado{
   position:relative;
   background:var(--negro); /* sección negra */
-  height:340px;            
+  height:800px;            
   overflow:hidden;
   display:flex;
   align-items:center;  /* centra vertical */
