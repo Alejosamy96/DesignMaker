@@ -1,0 +1,44 @@
+:root { 
+  --negro:#000000; 
+  --fondo:#ffffff; 
+}
+
+body{
+  margin:0;
+  background:var(--fondo);
+  font-family: Arial, sans-serif;
+}
+
+/*Seccion con toda la data del encabezado*/
+
+.encabezado{
+  position:relative;
+  background:var(--negro); /* sección negra */
+  height:340px;            
+  overflow:hidden;
+  display:flex;
+  align-items:center;  /* centra vertical */
+  justify-content:center; /* centra horizontal */
+  padding:20px;
+}
+
+.informacionDelEncabezado {
+  position:relative;
+  z-index:2; /* por encima del SVG */
+  max-width: 700px;
+}
+
+.encabezado .lineaDeSeparacion{
+  position:absolute;
+  left:0; bottom:0;
+  width:100%;
+  height:140px; /* altura de la curva */
+  display:block;
+  z-index:1; /* detrás del texto */
+}
+
+.encabezado .DataTitulo{
+    
+}
+
+
