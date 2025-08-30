@@ -41,4 +41,57 @@ body{
     
 }
 
+.menu {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;   /* 👈 los junta más */
+  align-items: center;
+  gap: 200px;                 /* 👈 espacio total entre logo, menú y botón */
+  z-index: 3;
+}
 
+.menu-left .logo {
+  color: white;
+  font-size: 22px;
+  margin: 0;
+}
+
+/* Menú */
+.menu-center ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;  /* 👈 menos separación entre enlaces */
+}
+
+.menu-center li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;  /* un poquito más compacto */
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu-center li a:hover {
+  color: #ccc;
+}
+
+/* Botón de WhatsApp */
+.menu-right .btn-whatsapp {
+  background: #25D366;
+  color: white;
+  padding: 10px 20px; /* 👈 más compacto */
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.menu-right .btn-whatsapp:hover {
+  background: #1ebe5b;
+}
