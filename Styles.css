@@ -9,10 +9,6 @@ body {
   font-family: Arial, sans-serif;
 }
 
-
-
-
-/* Header fijo */
 .menu {
   position: fixed;
   top: 0;
@@ -28,15 +24,17 @@ body {
   box-sizing: border-box;
 }
 
-/* Logo */
 .menu-left .logo {
   height: 80px;
   width: auto;
-  padding-left: 200%;
+  padding-left: 0%;
 }
 
 /* Menú centrado */
 .menu-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   margin: 0 auto;
 }
 
@@ -52,7 +50,7 @@ body {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .menu-center a:hover {
@@ -63,15 +61,6 @@ body {
   height: 50px;
   width: auto;
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -98,16 +87,15 @@ body {
   line-height: 1.2;
   margin: 0;
   width: 40%;
-  padding-left  : 5%;
+  padding-left  : 0%;
 }
-
 
 .datacentral-right {
   max-width: 500px;
   font-size: 1.1rem;
   line-height: 1.6;
   position: relative;
-  padding-right: 10%;
+  padding-right: 0%;
 }
 
 .datacentral-right .botonCompra{
@@ -115,15 +103,6 @@ body {
   height: 50px;
   width: auto;
 }
-
-
-
-
-
-
-
-
-
 
 
 
