@@ -76,7 +76,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 5%;
+  gap: 0;
 }
 
 .datacentral-left {
@@ -84,12 +84,12 @@ body {
   font-weight: bold;
   line-height: 1.2;
   margin: 0;
-  width: 40%;
-  padding-left  : 0%;
+  width: 50%;
+  padding-right: 20%;
 }
 
 .datacentral-right {
-  max-width: 500px;
+  max-width: 400px;
   font-size: 1.1rem;
   line-height: 1.6;
   position: relative;
@@ -97,12 +97,154 @@ body {
 }
 
 .datacentral-right .botonCompra{
-  padding-top: 5%;
+  margin-top: 5%;
   height: 50px;
-  width: auto;
+  width: 200px;
+  font-size: 20px;              
+  color: black;                
+  border: none;                 
+  border-radius: 30px;          
+  cursor: pointer;              
+  background: linear-gradient(135deg, #FFD23F, #FF4E00);
+  transition: transform 0.2s;
 }
 
 
+
+.seccionguia-general{
+  background: #ffffff;
+  color: #000000;
+  padding: 200px;
+  margin: 0 auto;             
+  display: flex;
+  flex-direction: column;     
+  justify-content: center;    
+  align-items: center;        
+  gap: 20px;                  
+  max-width: 100%;   
+}
+
+.seccionguia-general .top{
+  display: flex;
+  justify-content: center;    
+  align-items: center;        
+  gap: 100px;                  
+  max-width: 100%;
+}
+.seccionguia-general .top .texto{
+  font-size: 3rem;
+  line-height: 1.2;
+  max-width: fit-content;
+}
+.seccionguia-general .top .texto .p{
+  font-weight: bold;
+}
+
+.seccionguia-general .top .botonCompra{
+  margin-top: 5%;
+  height: 60px;
+  width: 200px;
+  font-size: 20px;
+  font-weight: bold;              
+  color: black;                
+  border: none;                 
+  border-radius: 30px;          
+  cursor: pointer;              
+  background: linear-gradient(135deg, #FFD23F, #FF4E00);
+  transition: transform 0.2s;
+}
+
+.seccionguia-general .mid{
+  display: grid;
+  grid-template-columns: repeat(3, 225px); /* 3 columnas */
+  gap: 30px; /* espacio entre cajas */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.seccionguia-general .mid .cuadro-oscuro{
+  background: #000000; 
+  color: #ffffff;
+  position: relative;
+  aspect-ratio: 1 / 1;        /* cuadrado */
+  width: 100%;                /* ocupa el espacio asignado por el grid */
+  border-radius: 25px;
+  padding: 30px;              /* espacio interno */
+  box-sizing: border-box;
+  text-align: center;
+  font-family: Arial, sans-serif;
+
+  /* efecto borde degradado */
+  border: 0px solid transparent;
+  background-clip: padding-box;
+}
+
+.seccionguia-general .mid .cuadro-oscuro::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 5px; 
+  background: linear-gradient(45deg, #ff4e00, #ffd23f, #ff00ff);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+.seccionguia-general .mid .cuadro-claro{
+  background: #CFCFCF; /* color base */
+  color: #000000;
+  position: relative;
+  aspect-ratio: 1 / 1;        /* cuadrado */
+  width: 100%;                /* ocupa el espacio asignado por el grid */
+  border-radius: 25px;
+  padding: 30px;              /* espacio interno */
+  box-sizing: border-box;
+  text-align: center;
+  font-family: Arial, sans-serif;
+
+  /* efecto borde degradado */
+  border: 0px solid transparent;
+  background-clip: padding-box;
+}
+
+.seccionguia-general .mid h2 {
+  font-size: 4rem;
+  margin: 10px 0;
+  max-width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.seccionguia-general .mid p {
+  font-size: 1rem;
+  line-height: 1.4;
+  max-width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.seccionguia-general .mid img {
+  width: 60%;         
+  height: auto;       
+  max-height: 60%;    
+  object-fit: contain;
+  margin: 0 auto 15px auto;
+  display: block;
+}
+
+.seccionguia-general .mid .icono {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #ffd23f;
+}
 
 .curva {
   background-color: #000000;
