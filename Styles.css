@@ -263,3 +263,32 @@ body {
   color: #ffd23f;
 }
 
+.secciondatos {
+  background-image: url("IMG/Fondo_principal.png"); /* ruta de la imagen */
+  width: 900px;                  /* aquí eliges el ancho */
+  aspect-ratio: 1 / 1;           /* relación 1:1 (cuadrada) */
+  
+  margin: 0 auto; /* centra horizontalmente dentro del main */
+  background-size: cover;        /* ajusta la imagen al cuadrado */
+  background-position: center;   /* centra la imagen */
+  background-repeat: no-repeat;  /* evita que se repita */
+  
+  border-radius: 20px;
+  display: flex;                 /* para centrar contenido */
+  align-items: center;
+  justify-content: center;
+  color: white;                  /* contraste */
+  text-align: center;
+  padding: 20px;
+
+}
+
+.secciondatos .titulo p{
+  
+  font-size:3rem;
+  margin: 10px 0;
+  max-width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
