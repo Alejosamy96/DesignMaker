@@ -6,7 +6,9 @@
 
 body {
   margin: 0;
+  display: flex;
   font-family: Arial, sans-serif;
+  justify-content: center;
 }
 
 .menu {
@@ -23,21 +25,17 @@ body {
   z-index: 1000;
   box-sizing: border-box;
 }
-
 .menu-left .logo {
   height: 50px;
   width: auto;
   padding-left: 0%;
 }
-
-/* Menú centrado */
 .menu-center {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   margin: 0 auto;
 }
-
 .menu-center ul {
   list-style: none;
   display: flex;
@@ -45,18 +43,12 @@ body {
   margin: 0;
   padding: 0;
 }
-
 .menu-center a {
-  color: white;
+  color: #808080;
   text-decoration: none;
   font-weight: bold;
   font-size: 20px;
 }
-
-.menu-center a:hover {
-  color: #ccc;
-}
-
 .menu-right .boton{
   height: 40px;
   width: auto;
@@ -65,7 +57,6 @@ body {
 .contenido {
   margin-top: 0px;
 }
-
 .datacentral{
   background: #000000;
   color: #ffffff;
@@ -78,24 +69,20 @@ body {
   align-items: center;
   gap: 0;
 }
-
 .datacentral-left {
   font-size: 3rem;
   font-weight: bold;
   line-height: 1.2;
   margin: 0;
   width: 50%;
-  padding-right: 10%;
 }
-
 .datacentral-right {
-  max-width: 400px;
+  width: 40%;
   font-size: 1.1rem;
   line-height: 1.6;
   position: relative;
-  padding-right: 0%;
+  padding-left: -10%;
 }
-
 .datacentral-right .botonCompra{
   margin-top: 5%;
   height: 50px;
@@ -141,7 +128,6 @@ body {
   gap: 20px;                  
   max-width: 100%;   
 }
-
 .seccionguia-general .top{
   display: flex;
   justify-content: center;    
@@ -157,7 +143,6 @@ body {
 .seccionguia-general .top .texto .p{
   font-weight: bold;
 }
-
 .seccionguia-general .top .botonCompra{
   margin-top: 5%;
   height: 50px;
@@ -171,7 +156,6 @@ body {
   background: linear-gradient(135deg, #FFD23F, #FF4E00);
   transition: transform 0.2s;
 }
-
 .seccionguia-general .mid{
   display: grid;
   grid-template-columns: repeat(3, 225px); 
@@ -179,7 +163,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .seccionguia-general .mid .cuadro-oscuro{
   background: #000000; 
   color: #ffffff;
@@ -195,7 +178,6 @@ body {
   z-index: 0;
 
 }
-
 .seccionguia-general .mid .cuadro-oscuro::before{
   content: "";
   position: absolute;
@@ -209,7 +191,6 @@ body {
   -webkit-mask-composite: xor;
           mask-composite: exclude;
 }
-
 .seccionguia-general .mid .cuadro-claro{
   background: #CFCFCF; 
   color: #000000;
@@ -226,7 +207,6 @@ body {
   overflow: hidden;
   z-index: 0;
 }
-
 .seccionguia-general .mid h2 {
   font-size: 4rem;
   margin: 10px 0;
@@ -235,7 +215,6 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
 .seccionguia-general .mid p {
   font-size: 1rem;
   line-height: 1.4;
@@ -244,7 +223,6 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
 .seccionguia-general .mid img {
   width: 50%;        
   max-width: 100px;  
@@ -253,7 +231,6 @@ body {
   margin: 0 auto 15px auto;
   display: block;
 }
-
 .seccionguia-general .mid .icono {
   position: absolute;
   top: 10px;
@@ -264,31 +241,131 @@ body {
 }
 
 .secciondatos {
-  background-image: url("IMG/Fondo_principal.png"); /* ruta de la imagen */
-  width: 900px;                  /* aquí eliges el ancho */
-  aspect-ratio: 1 / 1;           /* relación 1:1 (cuadrada) */
-  
-  margin: 0 auto; /* centra horizontalmente dentro del main */
-  background-size: cover;        /* ajusta la imagen al cuadrado */
-  background-position: center;   /* centra la imagen */
-  background-repeat: no-repeat;  /* evita que se repita */
-  
-  border-radius: 20px;
-  display: flex;                 /* para centrar contenido */
-  align-items: center;
+  display: flex;
   justify-content: center;
-  color: white;                  /* contraste */
+  align-items: center;    
+}
+.secciondatos .contenedor {
+  position: relative;  
+  max-width: 900px;
+  width: 100%;
+}
+.secciondatos .contenedor img {
+  display: block;  
+  max-width: 100%; 
+  height: auto;
+  border-radius: 30px;
+}
+.secciondatos .contenedor .overlay {
+  position: absolute;
+  color: #ffffff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+  padding-top: 2.5%;
+  gap: 20px;             
+}
+.secciondatos .contenedor .top .texto {
+  margin-top: 5%;
+  color: #CFCFCF;
+  font-size: 2.2rem;
+  line-height: 1.2;
+  white-space: nowrap;
   text-align: center;
-  padding: 20px;
+}
+.secciondatos .contenedor .mid {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 900px;
+  width: 100%;
+  gap: 5px;
+}
+.secciondatos .contenedor .mid .left {
+  color: #ffffff;
+  margin-left: 15%;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  width: 100%;
+}
+.secciondatos .contenedor .mid .right {
+  color: #ffffff;
+  margin-right: 15%;
+  max-width: 400px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  position: relative;
+}
+.secciondatos .contenedor .mid .right .botonCompra {
+  margin-top: 5%;
+  height: 50px;
+  width: 200px;
+  font-size: 20px;              
+  color: black;                
+  border: none;                 
+  border-radius: 30px;          
+  cursor: pointer;              
+  background: linear-gradient(135deg, #FFD23F, #FF4E00);
+  transition: transform 0.2s;
+}
+.secciondatos .contenedor .bot {
+  margin-top: 5%;
+  background-color: #ffffff;
+  border-radius: 20px;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  height: 50%;
+  width: 40%;
+  gap: 10px;
+}
+.secciondatos .contenedor .bot .titulo {
+  display: flex;   
+  align-items: center;
+  margin-left: 6%;
+  gap: 10px;
+  margin-top: 10%;
+}
+.secciondatos .contenedor .bot .icono {
+  font-size: 30px;
+  color: #ffd23f;
+}
+
+.secciondatos .contenedor .bot p {
+  font-size: 20px;
+  width: fit-content;
+  color: #000000;
+}
+
+.secciondatos .contenedor .bot .lista {
+  list-style: none;
+  margin-top: -5%;
+  width: 100%;
+  margin-left: 0%;
 
 }
 
-.secciondatos .titulo p{
-  
-  font-size:3rem;
-  margin: 10px 0;
-  max-width: 100%;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+.secciondatos .contenedor .bot .lista li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5%;
+  margin-bottom: 5%;
+}
+
+.secciondatos .contenedor .bot .lista img {
+  width: 15px;          
+  height: 15px;
+  border-radius: 0px;
+}
+
+.secciondatos .contenedor .bot .lista span {
+  font-size: 1rem;
+  color: #555;
 }
