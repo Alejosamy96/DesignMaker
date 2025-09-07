@@ -184,7 +184,7 @@ body {
   inset: 0;
   border-radius: 20px;
   padding: 5px; 
-  background: linear-gradient(45deg, #ff4e00, #ffd23f, #ff00ff);
+  background: linear-gradient(135deg, #F4CB29, #E94A31, #C64191, #00A9BC, #03A85F);
   -webkit-mask: 
     linear-gradient(#fff 0 0) content-box, 
     linear-gradient(#fff 0 0);
@@ -192,7 +192,7 @@ body {
           mask-composite: exclude;
 }
 .seccionguia-general .mid .cuadro-claro{
-  background: #CFCFCF; 
+  background: #EBEBEB;
   color: #000000;
   position: relative;
   aspect-ratio: 1 / 1;  
@@ -311,7 +311,7 @@ body {
   border: none;                 
   border-radius: 30px;          
   cursor: pointer;              
-  background: linear-gradient(135deg, #FFD23F, #FF4E00);
+  background: linear-gradient(135deg, #F4CB29, #FF4E00);
   transition: transform 0.2s;
 }
 .secciondatos .contenedor .bot {
@@ -340,7 +340,7 @@ body {
 .secciondatos .contenedor .bot p {
   font-size: 20px;
   width: fit-content;
-  color: #000000;
+  color: #00000f;
 }
 
 .secciondatos .contenedor .bot .lista {
