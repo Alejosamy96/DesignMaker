@@ -242,12 +242,14 @@ body {
 }
 
 .secciondatos {
+  flex-direction: column;     
   display: flex;
   justify-content: center;
   align-items: center;    
 }
 .secciondatos .contenedor {
   position: relative;  
+  flex-direction: column;     
   max-width: 900px;
   width: 100%;
 }
@@ -371,6 +373,87 @@ body {
   color: #555;
 }
 
+
+.seccion-quienes-somos {
+  background: #ffffff;
+  color: #000000;
+  padding: 80px 10%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;     
+}
+
+.seccion-quienes-somos .container{
+  position: relative;  
+  max-width: 900px;
+  width: 100%;
+}
+
+.seccion-quienes-somos h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.seccion-quienes-somos h2 span {
+  color: #000000;
+  font-weight: bold;
+}
+
+.seccion-quienes-somos p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.seccion-quienes-somos p span{
+  font-weight: bold;
+}
+
+.seccion-quienes-somos-imagen {
+  flex: none;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* imagen centrada */
+}
+
+.seccion-quienes-somos-imagen img {
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+.seccion-quienes-somos .bot{
+  display: flex;
+  justify-content: left;    
+  align-items: center;                         
+  max-width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.seccion-quienes-somos .bot .texto{
+  text-align: left;
+  line-height: 1;
+  max-width: fit-content;
+  padding-right: 5%;
+}
+
+.seccion-quienes-somos .bot .texto p{
+  font-size: 2rem;
+}
+
+.seccion-quienes-somos .bot .botonCompra{
+  height: 50px;
+  width: 200px;
+  font-size: 20px;      
+  color: black;                
+  border: none;                 
+  border-radius: 30px;          
+  cursor: pointer;              
+  background: linear-gradient(135deg, #FFD23F, #FF4E00);
+  transition: transform 0.2s;
+}
 
 
 
