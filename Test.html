@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Prueba cinta logos</title>
+<style>
+  .seccion-deslizar {
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    padding: 20px 0;
+  }
+
+  .seccion-deslizar-pista {
+    display: flex;
+    gap: 40px;
+    width: max-content;
+    /* la duración se define vía variable --duration (se setea desde JS) */
+    animation: deslizar var(--duration, 20s) linear infinite;
+    /* fallback por si JS no corre */
+    --slide-width: 1000px;
+  }
+
+  .imagen {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imagen img {
+    max-height: 80px;
+    max-width: 150px;
+    opacity: 0.7;
+    display: block;
+  }
+
+  @keyframes deslizar {
+    0%   { transform: translateX(0); }
+    100%{ transform: translateX(calc(-1 * var(--slide-width))); }
+  }
+</style>
+</head>
+<body>
+
+<section class="seccion-deslizar">
+  <div class="seccion-deslizar-pista">
+    <!-- SOLO un set de logos aquí (no duplicarlos manualmente) -->
+    <div class="imagen"><img src="IMG/Calendario.png" alt=""></div>
+    <div class="imagen"><img src="IMG/Calendario.png" alt=""></div>
+    <div class="imagen"><img src="IMG/Calendario.png" alt=""></div>
+    <div class="imagen"><img src="IMG/Calendario.png" alt=""></div>
+    <div class="imagen"><img src="IMG/Calendario.png" alt=""></div>
+  </div>
+</section>
+
+<script>
+/* Ejecuta cuando DOM y recursos (imágenes) están listos.
+   - Duplica el contenido automáticamente (una sola vez)
+   - Mide la anchura real y setea --slide-width para que la animación mueva exactamente la mitad
+   - Calcula una duración proporcional (ajustable)
+*/
+document.addEventListener('DOMContentLoaded', () => {
+  const pista = document.querySelector('.seccion-deslizar-pista');
+  if (!pista) return;
+
+  // Solo duplicar si no está ya duplicado (evita duplicados repetidos)
+  // Detectamos si el contenido ya contiene dos veces el primer child (simple heurístico)
+  const children = pista.children;
+  if (children.length === 0) return;
+
+  // Guardar original y duplicarlo
+  const originalHTML = pista.innerHTML;
+  // Evitar duplicar si ya está duplicado (por ejemplo si el usuario dejó duplicados en HTML)
+  // Comprobamos si el segundo grupo de children coincide con el primero en cantidad
+  if (!pista.dataset.duplicated) {
+    pista.innerHTML += originalHTML;
+    pista.dataset.duplicated = 'true';
+  }
+
+  // Esperar a que todas las imágenes dentro del track terminen de cargar para medir correctamente
+  const imgs = pista.querySelectorAll('img');
+  let pending = imgs.length;
+  if (pending === 0) applySizing(); // no hay imágenes, aplicar ya
+  else {
+    imgs.forEach(img => {
+      if (img.complete) {
+        pending--;
+        if (pending === 0) applySizing();
+      } else {
+        img.addEventListener('load', () => {
+          pending--;
+          if (pending === 0) applySizing();
+        });
+        img.addEventListener('error', () => {
+          pending--;
+          if (pending === 0) applySizing();
+        });
+      }
+    });
+  }
+
+  function applySizing(){
+    // scrollWidth ahora es el ancho total de la pista (original + duplicado)
+    const totalWidth = pista.scrollWidth;
+    const halfWidth = totalWidth / 2;
+
+    // Setear la variable CSS que usa la animación para moverse exacto la mitad
+    pista.style.setProperty('--slide-width', `${halfWidth}px`);
+
+    // Opcional: ajustar duración según anchura para velocidad constante (px / s)
+    const speedPxPerSec = 120; // modifica esta constante para hacer más rápido/lento
+    const durationSec = Math.max(6, Math.round(halfWidth / speedPxPerSec));
+    pista.style.setProperty('--duration', `${durationSec}s`);
+  }
+});
+</script>
+
+</body>
+</html>

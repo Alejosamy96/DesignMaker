@@ -10,6 +10,7 @@ body {
   display: flex;
   font-family: Arial, sans-serif;
   justify-content: center;
+  flex-direction: column;
 }
 
 .menu {
@@ -58,64 +59,61 @@ body {
 .contenido {
   margin-top: 0px;
 }
-.datacentral{
-  background: #000000;
+
+.datacentral {
+  width: 100%;
+  margin: 0 auto;
   color: #ffffff;
-  padding: 200px;
-  margin-top: 0;
-}
-.datacentral-container{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0;
+  position: relative;
+  justify-content: center; 
 }
-.datacentral-left {
+.datacentral .fondo {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: flex;
+}
+.datacentral-container {
+  position: absolute;
+  left: 50%;                 /* lo llevas al centro horizontal */
+  transform: translate(-50%, -50%); /* lo ajustas para que quede exactamente en el medio */
+  width: 100%;
+  margin-top: 20%;
+  max-width: 1200px;
+  height: auto;              /* ajusta según el contenido */
+  display: flex;
+  justify-content: space-between;  /* mantiene left/right */
+  align-items: center;
+  padding: 50px;
+  box-sizing: border-box;
+}
+.datacentral-container .left {
   font-size: 3rem;
   font-weight: bold;
   line-height: 1.2;
-  margin: 0;
   width: 50%;
 }
-.datacentral-right {
-  width: 40%;
-  font-size: 1.1rem;
+.datacentral-container .right{
+  width: 50%;
+  padding-left: 10%;
+  font-size: 1rem;
   line-height: 1.6;
   position: relative;
-  padding-left: -10%;
 }
-.datacentral-right .botonCompra{
+.datacentral-container .right .botonCompra{
   margin-top: 5%;
   height: 50px;
   width: 200px;
-  font-size: 20px;              
-  color: black;                
-  border: none;                 
-  border-radius: 30px;          
+  font-size: 20px;    
+  color: black;      
+  border: none;       
+  border-radius: 30px;
   cursor: pointer;              
   background: linear-gradient(135deg, #FFD23F, #FF4E00);
   transition: transform 0.2s;
 }
 
-.curva {
-  background-color: #000000;
-  position: relative;
-  width: 100%;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
-}
-.curva .lineaDeSeparacion {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
 
 .seccionguia-general{
   background: #ffffff;
@@ -177,7 +175,6 @@ body {
   font-family: Arial, sans-serif;
   overflow: hidden;
   z-index: 0;
-
 }
 .seccionguia-general .mid .cuadro-oscuro::before{
   content: "";
@@ -240,6 +237,7 @@ body {
   font-size: 2rem;
   color: #ffd23f;
 }
+
 
 .secciondatos {
   flex-direction: column;     
@@ -339,13 +337,11 @@ body {
   font-size: 30px;
   color: #ffd23f;
 }
-
 .secciondatos .contenedor .bot p {
   font-size: 20px;
   width: fit-content;
   color: #00000f;
 }
-
 .secciondatos .contenedor .bot .lista {
   list-style: none;
   margin-top: -5%;
@@ -353,7 +349,6 @@ body {
   margin-left: 0%;
 
 }
-
 .secciondatos .contenedor .bot .lista li {
   display: flex;
   justify-content: flex-start;
@@ -361,13 +356,11 @@ body {
   gap: 5%;
   margin-bottom: 5%;
 }
-
 .secciondatos .contenedor .bot .lista img {
   width: 15px;          
   height: 15px;
   border-radius: 0px;
 }
-
 .secciondatos .contenedor .bot .lista span {
   font-size: 1rem;
   color: #555;
@@ -384,45 +377,37 @@ body {
   align-items: center;
   flex-direction: column;     
 }
-
 .seccion-quienes-somos .container{
   position: relative;  
   max-width: 900px;
   width: 100%;
 }
-
 .seccion-quienes-somos h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
-
 .seccion-quienes-somos h2 span {
   color: #000000;
   font-weight: bold;
 }
-
 .seccion-quienes-somos p {
   font-size: 1.5rem;
   line-height: 1.6;
   margin-bottom: 20px;
 }
-
 .seccion-quienes-somos p span{
   font-weight: bold;
 }
-
 .seccion-quienes-somos-imagen {
   flex: none;
   width: 100%;
   display: flex;
-  justify-content: center; /* imagen centrada */
+  justify-content: center;
 }
-
 .seccion-quienes-somos-imagen img {
   max-width: 100%;
   border-radius: 20px;
 }
-
 .seccion-quienes-somos .bot{
   display: flex;
   justify-content: left;    
@@ -431,18 +416,15 @@ body {
   padding-left: 5%;
   padding-right: 5%;
 }
-
 .seccion-quienes-somos .bot .texto{
   text-align: left;
   line-height: 1;
   max-width: fit-content;
   padding-right: 5%;
 }
-
 .seccion-quienes-somos .bot .texto p{
   font-size: 2rem;
 }
-
 .seccion-quienes-somos .bot .botonCompra{
   height: 50px;
   width: 200px;
@@ -459,6 +441,56 @@ body {
 
 
 
+
+
+
+
+
+footer {
+  width: 100%;
+  background: var(--negro);
+  color: white;
+}
+.menu-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 40px;
+  background-color: #000;
+}
+.menu-left .logo {
+  max-width: 50px;
+  height: auto;
+}
+.menu-center ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+.menu-center a {
+  color: #808080;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+.menu-right .boton {
+  height: 40px;
+  width: auto;
+}
+
+.division{
+  background-color: #808080;
+  height: 0.5px;
+}
+
+.derechos{
+  color: #808080;
+  width: 100%;
+  text-align: center;
+}
 
 
 
