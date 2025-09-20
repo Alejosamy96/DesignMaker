@@ -56,9 +56,16 @@ body {
   width: auto;
 }
 
+
+
+
+
 .contenido {
   margin-top: 0px;
 }
+
+
+
 
 .datacentral {
   width: 100%;
@@ -70,20 +77,19 @@ body {
 }
 .datacentral .fondo {
   width: 100%;
-  max-width: 1200px;
   height: auto;
   display: flex;
 }
 .datacentral-container {
   position: absolute;
-  left: 50%;                 /* lo llevas al centro horizontal */
-  transform: translate(-50%, -50%); /* lo ajustas para que quede exactamente en el medio */
+  left: 50%;                
+  transform: translate(-50%, -50%);
   width: 100%;
   margin-top: 20%;
   max-width: 1200px;
-  height: auto;              /* ajusta según el contenido */
+  height: auto;              
   display: flex;
-  justify-content: space-between;  /* mantiene left/right */
+  justify-content: space-between;  
   align-items: center;
   padding: 50px;
   box-sizing: border-box;
@@ -113,6 +119,15 @@ body {
   background: linear-gradient(135deg, #FFD23F, #FF4E00);
   transition: transform 0.2s;
 }
+
+
+
+
+
+
+
+
+
 
 
 .seccionguia-general{
@@ -237,6 +252,17 @@ body {
   font-size: 2rem;
   color: #ffd23f;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 .secciondatos {
@@ -367,10 +393,18 @@ body {
 }
 
 
+
+
+
+
+
+
+
+
 .seccion-quienes-somos {
   background: #ffffff;
   color: #000000;
-  padding: 80px 10%;
+  padding-top: 5%;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -444,6 +478,135 @@ body {
 
 
 
+.seccion-bono-exclusivo{
+  background: #ffffff;
+  color: #000000;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;     
+}
+.seccion-bono-exclusivo .container{
+  position: relative;  
+  max-width: 900px;
+  width: 100%;
+}
+.seccion-bono-exclusivo .top{
+  display: flex;
+  justify-content: center;    
+  align-items: center;        
+  gap: 175px;                  
+  max-width: 100%;
+}
+.seccion-bono-exclusivo .top .titulo{
+  display: flex;
+  justify-content: center;    
+  align-items: center;    
+  text-align: center;
+  font-size: 1.7rem;
+  max-width: fit-content;
+}
+.seccion-bono-exclusivo img{
+  max-height: 30px;
+  width: auto;
+}
+.seccion-bono-exclusivo .mid{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.seccion-bono-exclusivo .mid span{
+  font-weight: bold;
+}
+.seccion-bono-exclusivo .bot{
+  display: grid;
+  grid-template-columns: repeat(3, 225px); 
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.seccion-bono-exclusivo .bot .cuadro-oscuro{
+  background: #000000; 
+  color: #ffffff;
+  position: relative;
+  aspect-ratio: 1 / 1;    
+  width: 100%;            
+  border-radius: 25px;
+  padding: 30px;          
+  box-sizing: border-box;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  z-index: 0;
+}
+.seccion-bono-exclusivo .bot .cuadro-oscuro::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 5px; 
+  background: linear-gradient(135deg, #F4CB29, #E94A31, #C64191, #00A9BC, #03A85F);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+.seccion-bono-exclusivo .bot .cuadro-claro{
+  background: #EBEBEB;
+  color: #000000;
+  position: relative;
+  aspect-ratio: 1 / 1;  
+  width: 100%;          
+  border-radius: 25px;
+  padding: 30px;        
+  box-sizing: border-box;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  border: 0px solid transparent;
+  background-clip: padding-box;
+  overflow: hidden;
+  z-index: 0;
+}
+.seccion-bono-exclusivo .bot h2 {
+  font-size: 4rem;
+  margin: 10px 0;
+  max-width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.seccion-bono-exclusivo .bot p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  max-width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.seccion-bono-exclusivo .bot .icono {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #ffd23f;
+}
+
+
+
+
+
+
+
+.seccion-compra-ahora
+
+
+
+
+
 
 
 footer {
@@ -478,9 +641,17 @@ footer {
 }
 .menu-right .boton {
   height: 40px;
-  width: auto;
-}
+  width: 150px;
+  font-size: 15px;      
+  color: white;
+  background-color: #000000;                
+  border: #ffffff;                 
+  border-radius: 30px;          
+  cursor: pointer;              
+  transition: transform 0.2s;
+  border: 1px solid white;
 
+}
 .division{
   background-color: #808080;
   height: 0.5px;
@@ -500,6 +671,7 @@ footer {
 /* FORM PROVISIONAL */
 .form-container {
   width: 300px;
+  height: 300px;
   margin: 60px auto;
   padding: 20px;
   border: 2px solid #000;
