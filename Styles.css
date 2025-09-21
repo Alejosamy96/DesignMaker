@@ -69,6 +69,7 @@ body {
 
 .datacentral {
   width: 100%;
+  max-width: 1500px;
   margin: 0 auto;
   color: #ffffff;
   display: flex;
@@ -190,6 +191,7 @@ body {
   font-family: Arial, sans-serif;
   overflow: hidden;
   z-index: 0;
+
 }
 .seccionguia-general .mid .cuadro-oscuro::before{
   content: "";
@@ -476,6 +478,138 @@ body {
 
 
 
+.seccion-reloj {
+  background: #ffffff;
+  color: #000000;
+  padding-top: 5%;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;     
+}
+
+.seccion-reloj .container{
+  position: relative;  
+  max-width: 900px;
+  width: 100%;
+  height: max-content;
+  background: #000000; 
+  color: #ffffff;
+  position: relative;        
+  border-radius: 25px;
+  padding: 30px;          
+  box-sizing: border-box;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  z-index: 0;
+}
+.seccion-reloj .container::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 5px; 
+  background: linear-gradient(135deg, #F4CB29, #E94A31, #C64191, #00A9BC, #03A85F);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+.seccion-reloj .container .top{
+  display: flex;
+  justify-content: left;    
+  align-items: center;                         
+  max-width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.seccion-reloj .container .top .texto{
+  text-align: left;
+  line-height: 1;
+  max-width: fit-content;
+  padding-right: 20%;
+  margin-right: 12.5%;
+  width: 50%;
+}
+.seccion-reloj .container .top .texto p{
+  font-size: 2rem;
+}
+.seccion-reloj .container .top .texto span{
+  font-weight: bold;
+}
+.seccion-reloj .container .top .icono{
+  text-align: left;
+  line-height: 1;
+  max-width: fit-content;
+  border: none;             
+}
+.seccion-reloj .container .top .icono img{
+  height: 100px;   
+}
+.seccion-reloj .container .bot{
+  display: flex;
+  justify-content: left;    
+  align-items: center;                         
+  max-width: 100%;
+  padding-left: 50px;
+}
+.seccion-reloj .container .bot .informacion{
+  text-align: left;
+  display: flex;
+  justify-content: left;    
+  align-items: center;  
+  line-height: 2;
+  max-width: fit-content;
+  gap: 0px;
+  width: 70%;
+}
+.seccion-reloj .container .bot .informacion .texto{
+  color: #fffff0;
+  font-size: 1.5rem;
+}
+.seccion-reloj .container .bot .cuenta{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  gap: 15px;
+  height: 30px;
+  padding: 20px 40px;
+  border: 5px solid black;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #f4cb29, #e94a31, #c64191, #00a9bc, #03a85f);
+  color: #fff;
+  font-weight: bold;
+}
+.seccion-reloj .container .bot .cuenta p{
+  font-size: 2rem;
+  display: block;
+  margin-top: 5%;
+  margin-left: -5%;
+  margin-right: -5%;
+}
+.seccion-reloj .container .bot .cuenta .segmento {
+  text-align: center;
+}
+.seccion-reloj .container .bot .cuenta .tiempo {
+  font-size: 2rem;
+  font-weight: lighter;
+  display: block;
+}
+.seccion-reloj .container .bot .cuenta .texto {
+  font-size: 0.5rem;
+  font-weight: normal;
+}
+
+
+
+
 
 
 .seccion-bono-exclusivo{
@@ -600,10 +734,68 @@ body {
 
 
 
-
-.seccion-compra-ahora
-
-
+.seccion-compra-ahora {
+  background: #ffffff;
+  color: #000000;
+  margin-bottom: 2%;
+  margin-top: -2.5%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;     
+}
+.seccion-compra-ahora .container{
+  position: relative;  
+  max-width: 900px;
+  width: 100%;
+  margin-bottom: -37%;
+}
+.seccion-compra-ahora .container .mid{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 100px;
+  gap: 30px;
+  padding: 20px 40px;
+  border: 5px solid black;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #f4cb29, #e94a31, #c64191, #00a9bc, #03a85f);
+  color: #fff;
+  font-weight: bold;
+}
+.seccion-compra-ahora .container .mid p{
+  font-size: 3rem;
+  display: block;
+  margin-left: -5%;
+  margin-right: -5%;
+}
+.seccion-compra-ahora .container .mid .segmento {
+  text-align: center;
+}
+.seccion-compra-ahora .container .mid .tiempo {
+  font-size: 4rem;
+  display: block;
+}
+.seccion-compra-ahora .container .mid .texto {
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+.seccion-compra-ahora .container .bot{
+  height: 40px;
+}
+.seccion-compra-ahora .container .bot .boton{
+  margin-top: 7.5%;
+  max-height: 40px;
+  border-radius: 50px;
+  width: auto;
+}
+.seccion-compra-ahora .container .bot p{
+  margin-top: 7.5%;
+  color: #ffffff;
+  font-size: 10px;
+}
 
 
 
@@ -611,15 +803,17 @@ body {
 
 footer {
   width: 100%;
+  background-color: #000000;
   background: var(--negro);
   color: white;
 }
 .menu-container {
+  height: 250px;
   display: flex;
-  align-items: center;
+  align-items:end;
   justify-content: space-between;
   padding: 12px 40px;
-  background-color: #000;
+  background-color: #000000;
 }
 .menu-left .logo {
   max-width: 50px;
@@ -650,18 +844,24 @@ footer {
   cursor: pointer;              
   transition: transform 0.2s;
   border: 1px solid white;
-
 }
 .division{
   background-color: #808080;
-  height: 0.5px;
+  height: 0.1em;
 }
 
 .derechos{
+  background-color: #000000;
+  padding-top: 1%;
+  height: 50px;
   color: #808080;
   width: 100%;
   text-align: center;
 }
+
+
+
+
 
 
 
