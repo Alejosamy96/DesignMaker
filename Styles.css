@@ -1,3 +1,45 @@
+@font-face {
+  font-family: 'Mont';
+  src: url('FONTS/Mont-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Mont';
+  src: url('FONTS/Mont-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Mont';
+  src: url('FONTS/Mont-Book.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Mont';
+  src: url('FONTS/Mont-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Mont';
+  src: url('FONTS/Mont-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Mont';
+  src: url('FONTS/Mont-SemiBoldItalic.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('FONTS/MyriadPro-Regular 305.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
 
 body {
   margin: 0;
@@ -965,7 +1007,7 @@ footer .derechos {
 
 
 
-/* FORM PROVISIONAL */
+
 .form-container {
   width: 300px;
   height: 300px;
@@ -976,11 +1018,9 @@ footer .derechos {
   text-align: center;
   background-color: #fdfdf9;
 }
-
 .form-container h2 {
   margin-bottom: 15px;
 }
-
 .form-container input {
   display: block;
   width: 95%;
@@ -990,13 +1030,11 @@ footer .derechos {
   border-radius: 5px;
   background-color: #ddd;
 }
-
 .form-buttons {
   display: flex;
   justify-content: space-around;
   margin-top: 10px;
 }
-
 .form-buttons button {
   padding: 8px 15px;
   border: 2px solid #000;
