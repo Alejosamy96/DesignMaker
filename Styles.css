@@ -256,7 +256,7 @@ body {
   line-height: 1.2;
   max-width: fit-content;
 }
-.seccionguia-general .top .texto .p{
+.seccionguia-general .top .texto p{
   font-weight: bold;
 }
 .seccionguia-general .top img{
@@ -291,6 +291,7 @@ body {
   inset: 0;
   border-radius: 20px;
   padding: 5px; 
+  pointer-events: none;
   background: linear-gradient(135deg, #F4CB29, #E94A31, #C64191, #00A9BC, #03A85F);
   -webkit-mask: 
     linear-gradient(#fff 0 0) content-box, 
@@ -775,9 +776,11 @@ body {
 }
 .seccion-bono-exclusivo .bot{
   display: grid;
+  justify-content: center;    
+  align-items: center;    
   grid-template-columns: repeat(3, 225px); 
   gap: 30px;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 .seccion-bono-exclusivo .bot .cuadro-oscuro{
@@ -856,8 +859,6 @@ body {
 .seccion-compra-ahora {
   background: #ffffff;
   color: #000000;
-  margin-bottom: 2%;
-  margin-top: -2.5%;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -868,13 +869,14 @@ body {
   position: relative;  
   max-width: 900px;
   width: 100%;
-  margin-bottom: -37%;
+  margin-bottom: -8%;
 }
 .seccion-compra-ahora .container .mid{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
+  margin-left: 25%;
+  width: 40%;
   height: 100px;
   gap: 30px;
   padding: 20px 40px;
@@ -905,15 +907,15 @@ body {
   height: 40px;
 }
 .seccion-compra-ahora .container .bot .boton{
-  margin-top: 7.5%;
   max-height: 40px;
   border-radius: 50px;
   width: auto;
+  margin-top: 3%;
 }
 .seccion-compra-ahora .container .bot p{
-  margin-top: 7.5%;
   color: #ffffff;
   font-size: 10px;
+  margin-top: 3%;
 }
 
 
