@@ -16,7 +16,7 @@ body {
   align-items: center; 
   justify-content: space-between;
   padding: 0 20px;
-  height: 50px;
+  height: 60px;
   z-index: 1000;
   box-sizing: border-box;
 }
@@ -37,7 +37,7 @@ body {
 }
 .menu .menu-left img {
   display: block;          
-  max-height: 40px; 
+  max-height: 30px; 
   width: 100%;         
   object-fit: contain;
   margin: 0;
@@ -391,8 +391,8 @@ body {
   display: flex;
   justify-content: left;
   flex-direction: column;
-  height: 50%;
-  width: 40%;
+  height: 45%;
+  width: 35%;
   gap: 10px;
 }
 .secciondatos .contenedor .bot .titulo {
@@ -506,6 +506,49 @@ body {
   margin-top: 5%;
   height: 70px;
 }
+
+
+
+
+
+
+.seccion-carrusel {
+  width: 100%;
+  background-color: #ffffff; 
+  padding: 20px 0;            
+  overflow: hidden;
+}
+.seccion-carrusel .titulo{
+  text-align: center;
+}
+.seccion-carrusel .titulo p{
+  font-size: 2rem;
+  font-weight: bold;
+}
+.seccion-carrusel .carrusel {
+  width: 100%;
+  overflow: hidden;
+}
+.seccion-carrusel .carrusel-contenido {
+  display: flex;
+  animation: deslizar 20s linear infinite;
+  animation-delay: 0s; 
+  animation-play-state: running; 
+}
+.seccion-carrusel .carrusel img {
+  height: 80px;       
+  margin-right: 40px; 
+}
+@keyframes deslizar {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
 
 
 
