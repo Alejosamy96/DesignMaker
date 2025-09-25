@@ -487,7 +487,7 @@ body {
 .seccion-quienes-somos {
   background: #ffffff;
   color: #000000;
-  padding-top: 5%;
+  margin-top: 75px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -599,6 +599,7 @@ body {
 
 
 .QYA {
+  margin-top: 75px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -611,15 +612,16 @@ body {
   position: relative;  
   max-width: 900px;
   width: 100%;
-  height: 600px;
+  height: 700px;
   border-radius: 25px;     
   box-sizing: border-box;
-  padding-top: 5%;
+  padding-top: 75px;
   padding-left: 130px;
-  padding-bottom: 5%;
+  padding-bottom: 75px;
   padding-right: 120px;
-  margin-bottom: -10%;
+  margin-bottom: -260px;
   background-color: #f0f0f0;
+  transition: margin-bottom 0.4s ease;
 }
 .QYA .QYA-container .título {
   margin-bottom: 40px;
@@ -720,7 +722,6 @@ body {
   -webkit-mask-composite: xor;
           mask-composite: exclude;
 }
-
 .seccion-reloj .container .top{
   display: flex;
   justify-content: left;    
@@ -729,7 +730,6 @@ body {
   padding-left: 5%;
   padding-right: 5%;
 }
-
 .seccion-reloj .container .top .texto{
   text-align: left;
   line-height: 1;
