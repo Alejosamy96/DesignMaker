@@ -41,6 +41,10 @@
   font-style: normal;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   display: flex;
@@ -551,13 +555,13 @@ body {
 
 
 
+
 .seccion-carrusel {
   width: 100%;
   background-color: #ffffff;
   padding: 20px 0;
   overflow: hidden;
 }
-
 .seccion-carrusel .titulo {
   text-align: center;
 }
@@ -566,27 +570,26 @@ body {
   font-size: 2rem;
   font-weight: bold;
 }
-
-.seccion-carrusel .carrusel {
+.carrusel {
   width: 100%;
   overflow: hidden;
 }
-
-.seccion-carrusel .carrusel-contenido {
-  width: 200%; 
-  height: 100px;   
-  background-image: url("IMG/Loop.png");
-  background-repeat: repeat-x; 
-  background-size: contain;    
-  animation: deslizar 20s linear infinite;
+.seccion-deslizar-pista {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  animation: deslizar 25s linear infinite;
 }
-
+.seccion-deslizar-pista img {
+  height: 70px;
+  width: auto;
+}
 @keyframes deslizar {
-  from {
-    background-position: 0 0;
+  0% {
+    transform: translateX(0);
   }
-  to {
-    background-position: -100% 0;
+  100% {
+    transform: translateX(-50%);
   }
 }
 
@@ -599,7 +602,7 @@ body {
 
 
 .QYA {
-  margin-top: 75px;
+  margin-top: 30px;
   text-align: center;
   display: flex;
   justify-content: center;
