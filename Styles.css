@@ -51,7 +51,6 @@ body {
   font-family: Arial, sans-serif;
   justify-content: center;
   flex-direction: column;
-  
 }
 .menu {
   position: fixed;
@@ -151,18 +150,22 @@ body {
   height: auto;
   display: flex;
 }
-.datacentral .top {
+.datacentral .top,
+.datacentral .mid,
+.datacentral .bot {
   position: absolute;
-  left: 50%;                
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  margin-top: 25%;
   max-width: 1500px;
-  height: auto;              
+  height: auto;
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+}
+.datacentral .top {
+  margin-top: 25%;
   padding-left: 10%;
   padding-right: 8%;
 }
@@ -185,18 +188,8 @@ body {
   height: 50px;
 }
 .datacentral .mid {
-  position: absolute;
   margin-top: 45%;
-  left: 50%;                
-  transform: translate(-50%, -50%);
-  width: 100%;
-  max-width: 1500px;
   padding: 12.5%;
-  height: auto;              
-  display: flex;
-  justify-content: space-between;  
-  align-items: center;
-  box-sizing: border-box;
 }
 .datacentral .mid .right{
   height: 40px;
@@ -211,17 +204,8 @@ body {
   height: 100%;
 }
 .datacentral .bot {
-  position: absolute;
   margin-top: 80%;
-  left: 50%;                
-  transform: translate(-50%, -50%);
-  width: 100%;
-  max-width: 1500px;  
-  height: 100%;          
-  display: flex;
-  justify-content: space-between;  
-  align-items: center;
-  box-sizing: border-box;
+  height: 100%;
 }
 .datacentral .bot img{
   margin-left: 41%;
@@ -411,14 +395,17 @@ body {
   white-space: nowrap;
   text-align: center;
 }
-.secciondatos .contenedor .mid {
+.secciondatos .contenedor .mid,
+.secciondatos .contenedor .bot {
   margin-top: 5%;
   display: flex;
+  gap: 5px;
+}
+.secciondatos .contenedor .mid {
   justify-content: center;
   align-items: flex-start;
   max-width: 900px;
   width: 100%;
-  gap: 5px;
 }
 .secciondatos .contenedor .mid .left {
   color: #ffffff;
@@ -440,10 +427,8 @@ body {
   height: 50px;
 }
 .secciondatos .contenedor .bot {
-  margin-top: 5%;
   background-color: #ffffff;
   border-radius: 20px;
-  display: flex;
   justify-content: left;
   flex-direction: column;
   height: 45%;
@@ -471,7 +456,6 @@ body {
   margin-top: -5%;
   width: 100%;
   margin-left: 0%;
-
 }
 .secciondatos .contenedor .bot .lista li {
   display: flex;
@@ -567,80 +551,103 @@ body {
 
 
 .Portafolio{
-  background-color: #000000;
-}
-
-
-
-
-
-
-.Portafolio .Bot {
-  position: relative;
+  background: #000000;
+  color: #ffffff;
+  margin-top: 75px;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 0;
+  flex-direction: column;     
+  justify-self: center;
+  width: 100%;
+  max-width: 1500px;
 }
-.Portafolio .carrusel {
-  position: relative;
-  width: 80%;
-  height: 400px;
+.Portafolio .Top{
+  margin: 0px;
+}
+.Portafolio .Top .titulo{  
+  font-size: 40px;
+  margin: 50px;
+  margin-bottom: 0px;
+}
+.Portafolio .Top .texto{
+  font-size: 20px;
+  margin: 15px;
+  margin-bottom: 0px;
+  color: #808080;
+}
+.Portafolio .Mid .container{
+  background: #000000;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  gap: 60%;
+}
+.Portafolio .Mid .container .Imagen-izquierda,
+.Portafolio .Mid .container .Imagen-derecha{
+  width: 12.5%;
+}
+.Portafolio .Mid .container .Imagen-izquierda img,
+.Portafolio .Mid .container .Imagen-derecha img{
+  width: 100%;
+}
+.Portafolio .Bot .container {
+  margin: 5% 0;
+  background: #000000;
+  color: #ffffff;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  gap: 1%;
 }
-.Portafolio .carrusel-item {
-  position: absolute;
-  transition: transform 0.6s ease, opacity 0.6s ease;
-  opacity: 0;
-  transform: scale(0.6);
-  z-index: 0;
-}
-.Portafolio .carrusel-item img {
-  width: 500px;
-  max-width: 100%;
-  border-radius: 15px;
-}
-.Portafolio .carrusel-item.active {
-  opacity: 1;
-  transform: scale(1);
-  z-index: 3;
-}
-.Portafolio .carrusel-item.prev {
-  opacity: 0.8;
-  transform: translateX(-250px) scale(0.8);
-  z-index: 2;
-}
-.Portafolio .carrusel-item.next {
-  opacity: 0.8;
-  transform: translateX(250px) scale(0.8);
-  z-index: 2;
-}
-.Portafolio .Bot .btn-carrusel {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
+.Portafolio .Bot .container .izquierda,
+.Portafolio .Bot .container .centro,
+.Portafolio .Bot .container .derecha {
+  background: #000000;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  transition: 
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    filter 0.4s ease,
+    z-index 0.4s ease;
   cursor: pointer;
-  padding: 0;
+  position: relative;
 }
-.Portafolio .Bot .btn-carrusel img {
-  width: 40px;  
-  height: 40px;
-  border-radius: 20%;
-  transition: opacity 0.3s, transform 0.3s;
+.Portafolio .Bot .container img {
+  width: 100%;
+  transition: inherit;
+  border-radius: 8px;
 }
-.Portafolio .Bot .btn-prev {
-  left: 10px;
+.Portafolio .Bot .container .izquierda:hover,
+.Portafolio .Bot .container .centro:hover,
+.Portafolio .Bot .container .derecha:hover {
+  transform: scale(1.1);
+  z-index: 10;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
 }
-.Portafolio .Bot .btn-next {
-  right: 10px;
+.Portafolio .Bot .container:hover .izquierda,
+.Portafolio .Bot .container:hover .centro,
+.Portafolio .Bot .container:hover .derecha {
+  filter: brightness(0.5);
+  transform: scale(0.95);
 }
-
-
+.Portafolio .Bot .container .izquierda:hover,
+.Portafolio .Bot .container .centro:hover,
+.Portafolio .Bot .container .derecha:hover {
+  filter: brightness(1);
+  transform: scale(1.1);
+}
+.Portafolio .Bot .container img{
+  width: 100%;
+}
 
 
 
@@ -798,7 +805,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;     
+  flex-direction: column;
 }
 
 .seccion-reloj .container{
@@ -830,11 +837,14 @@ body {
   -webkit-mask-composite: xor;
           mask-composite: exclude;
 }
-.seccion-reloj .container .top{
+.seccion-reloj .container .top,
+.seccion-reloj .container .bot {
   display: flex;
-  justify-content: left;    
-  align-items: center;                         
+  justify-content: left;
+  align-items: center;
   max-width: 100%;
+}
+.seccion-reloj .container .top {
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -861,11 +871,7 @@ body {
 .seccion-reloj .container .top .icono img{
   height: 100px;   
 }
-.seccion-reloj .container .bot{
-  display: flex;
-  justify-content: left;    
-  align-items: center;                         
-  max-width: 100%;
+.seccion-reloj .container .bot {
   padding-left: 50px;
 }
 .seccion-reloj .container .bot .informacion{
@@ -937,12 +943,15 @@ body {
   max-width: 900px;
   width: 100%;
 }
-.seccion-bono-exclusivo .top{
-  display: flex;
-  justify-content: center;    
-  align-items: center;        
-  gap: 175px;                  
+.seccion-bono-exclusivo .top,
+.seccion-bono-exclusivo .bot {
+  align-items: center;
+  justify-content: center;
   max-width: 100%;
+}
+.seccion-bono-exclusivo .top {
+  display: flex;
+  gap: 175px;
 }
 .seccion-bono-exclusivo .top .titulo{
   display: flex;
@@ -963,11 +972,9 @@ body {
 .seccion-bono-exclusivo .mid span{
   font-weight: bold;
 }
-.seccion-bono-exclusivo .bot{
+.seccion-bono-exclusivo .bot {
   display: grid;
-  justify-content: center;    
-  align-items: center;    
-  grid-template-columns: repeat(3, 225px); 
+  grid-template-columns: repeat(3, 225px);
   gap: 30px;
   max-width: 1500px;
   margin: 0 auto;
@@ -1186,51 +1193,4 @@ footer .derechos {
   color: #808080;
   width: 100%;
   text-align: center;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-.form-container {
-  width: 300px;
-  height: 300px;
-  margin: 60px auto;
-  padding: 20px;
-  border: 2px solid #000;
-  border-radius: 20px;
-  text-align: center;
-  background-color: #fdfdf9;
-}
-.form-container h2 {
-  margin-bottom: 15px;
-}
-.form-container input {
-  display: block;
-  width: 95%;
-  padding: 8px;
-  margin: 8px 0;
-  border: 2px solid #000;
-  border-radius: 5px;
-  background-color: #ddd;
-}
-.form-buttons {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 10px;
-}
-.form-buttons button {
-  padding: 8px 15px;
-  border: 2px solid #000;
-  border-radius: 5px;
-  background-color: #eee;
-  font-weight: bold;
-  cursor: pointer;
 }
