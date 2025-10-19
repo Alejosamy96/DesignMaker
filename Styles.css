@@ -278,8 +278,10 @@ body {
   margin-bottom: 0px;
   color: #808080;
 }
+.testimoniales .bot span{
+  font-weight: bold;
+}
 .testimoniales .bot .container {
-  margin: 5% 0;
   background: #ffffff;
   color: #000000;
   text-align: center;
@@ -291,7 +293,9 @@ body {
 .testimoniales .bot .container .izquierda,
 .testimoniales .bot .container .centro,
 .testimoniales .bot .container .derecha {
-  background: #ffffff;
+  margin-top: 7%;
+  margin-bottom: 3%;
+  background: #EBEBEB;
   color: #000000;
   display: flex;
   flex-direction: column;
@@ -305,12 +309,16 @@ body {
     z-index 0.4s ease;
   cursor: pointer;
   position: relative;
+  border-radius: 10px;
+  padding-top: 2%;
 }
 .testimoniales .bot .container img {
-  width: 100%;
+  width: 90%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
   transition: inherit;
   border-radius: 8px;
-    border: 4px solid transparent;
+  border: 4px solid transparent;
   border-radius: 10px;
   background-image: 
     linear-gradient(#fff, #fff), /* fondo interno */
@@ -321,24 +329,45 @@ body {
 .testimoniales .bot .container .izquierda:hover,
 .testimoniales .bot .container .centro:hover,
 .testimoniales .bot .container .derecha:hover {
-  transform: scale(1.1);
   z-index: 10;
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
 }
 .testimoniales .bot .container:hover .izquierda,
 .testimoniales .bot .container:hover .centro,
 .testimoniales .bot .container:hover .derecha {
-  filter: brightness(0.5);
-  transform: scale(0.95);
+  filter: brightness(0.8);
+  transform: scale(0.8);
 }
-.testimoniales .bot .container .izquierda:hover,
-.testimoniales .bot .container .centro:hover,
+.testimoniales .bot .container .izquierda:hover{
+  filter: brightness(1);
+  transform: scale(1.4);
+  animation: movera 1s ease-in-out forwards;
+  transform: translateX(100%);
+}
+.testimoniales .bot .container .centro:hover{
+  filter: brightness(1);
+  transform: scale(1.4);
+  animation: moverb 1s ease-in-out forwards;
+}
 .testimoniales .bot .container .derecha:hover {
   filter: brightness(1);
-  transform: scale(1.1);
+  transform: scale(1.4);
+  animation: moverc 1s ease-in-out forwards;
+  transform: translateX(-100%);
 }
 
-
+@keyframes movera {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100%) scale(1.4);  }
+}
+@keyframes moverb {
+  0% { transform: translateX(0); }
+  100% { transform: scale(1.4);  }
+}
+@keyframes moverc {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%) scale(1.4);  }
+}
 
 
 
