@@ -40,8 +40,8 @@
   font-weight: 400;
   font-style: normal;
 }
-
-html{
+/*                                CONFIGURACIÓN GLOBAL                                         */
+html {
   scroll-behavior: smooth;
 }
 
@@ -52,12 +52,15 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+
+/*                                MENÚ SUPERIOR FIJO                                           */
+
+/* Barra de menú fija superior */
 .menu {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: transparent;
   display: flex;
   align-items: center; 
   justify-content: space-between;
@@ -66,21 +69,22 @@ body {
   z-index: 1000;
   box-sizing: border-box;
 }
-.menu .menu-left{  
+
+/* Contenedor izquierdo del menú */
+.menu .menu-left {  
   display: flex;
   align-items: center;
   width: 20%;
 }
-.menu .menu-center{  
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
+
+/* Contenedor derecho del menú */
 .menu .menu-right {
   display: flex;
   align-items: center;
   width: 20%;
 }
+
+/* Logo o imagen en el lado izquierdo */
 .menu .menu-left img {
   display: block;          
   max-height: 30px; 
@@ -90,6 +94,8 @@ body {
   padding: 0;
   align-self: center;
 }
+
+/* Imagen o ícono en el lado derecho */
 .menu .menu-right img {
   display: block;
   max-height: 40px;
@@ -99,6 +105,8 @@ body {
   padding: 0;
   align-self: center;
 }
+
+/* Contenedor central del menú */
 .menu .menu-center {
   position: absolute;
   left: 50%;
@@ -107,6 +115,8 @@ body {
   display: flex;
   align-items: center;
 }
+
+/* Lista de enlaces en el centro del menú */
 .menu .menu-center ul {
   list-style: none;
   display: flex;
@@ -116,40 +126,40 @@ body {
   height: 100%;
   align-items: center;
 }
+
+/* Enlaces del menú */
 .menu .menu-center a {
   color: #808080;
   text-decoration: none;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 15px;
   line-height: 50px; 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/*                                SECCIÓN PRINCIPAL (DATACENTRAL)                              */
 
-
-
-
-
-
-
-
-
+/* Contenedor principal de datos o portada */
 .datacentral {
   width: 100%;
-  max-width: 1500px;
+  max-width: 2000px;
   margin: 0 auto;
   color: #ffffff;
   display: flex;
   position: relative;
   justify-content: center; 
 }
+
+/* Imagen o fondo principal */
 .datacentral .fondo {
   width: 100%;
   height: auto;
   display: flex;
 }
+
+/* Capas de contenido sobre el fondo */
 .datacentral .top,
 .datacentral .mid,
 .datacentral .bot {
@@ -164,11 +174,15 @@ body {
   align-items: center;
   box-sizing: border-box;
 }
+
+/* Parte superior (título + texto) */
 .datacentral .top {
   margin-top: 25%;
   padding-left: 10%;
   padding-right: 8%;
 }
+
+/* Texto grande del lado izquierdo */
 .datacentral .top .left {
   font-size: 3.5rem;
   font-weight: bold;
@@ -176,38 +190,54 @@ body {
   width: 50%;
   padding-right: 10%;
 }
-.datacentral .top .right{
+
+/* Texto o imagen del lado derecho */
+.datacentral .top .right {
   width: 50%;
   font-size: 1rem;
   line-height: 1.6;
   position: relative;
   padding-left: 5%;
 }
-.datacentral .top .right img{
+
+/* Imagen dentro del lado derecho superior */
+.datacentral .top .right img {
   margin-top: 5%;
   height: 50px;
 }
+
+/* Parte media de la portada */
 .datacentral .mid {
   margin-top: 45%;
   padding: 12.5%;
 }
-.datacentral .mid .right{
+
+/* Imagen derecha en la parte media */
+.datacentral .mid .right {
   height: 40px;
 }
-.datacentral .mid .right img{
+
+.datacentral .mid .right img {
   height: 100%;
 }
-.datacentral .mid .left{
+
+/* Imagen izquierda en la parte media */
+.datacentral .mid .left {
   height: 40px;
 }
-.datacentral .mid .left img{
+
+.datacentral .mid .left img {
   height: 100%;
 }
+
+/* Parte inferior */
 .datacentral .bot {
   margin-top: 80%;
   height: 100%;
 }
-.datacentral .bot img{
+
+/* Imagen o logo en la parte inferior */
+.datacentral .bot img {
   margin-left: 41%;
   height: 20%;
 }
@@ -222,13 +252,138 @@ body {
 
 
 
+.testimoniales {
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px 0;
+  overflow: hidden;
+}
+/* encabezado */
+.testimoniales .arriba {
+  width: 90%;
+  max-width: 1500px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.testimoniales .arriba h2 {
+  font-size: 30px;
+  color: #808080;
+  margin: 5px;
+}
+.testimoniales .arriba p {
+  font-size: 20px;
+  color: #808080;
+  margin: 5px;
+}
+
+.testimoniales .mid {
+  position: relative;
+  width: 100%;
+  max-width: 1500px;
+  height: 520px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+.testimoniales .mid .carrusel {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  transition: transform 0.8s cubic-bezier(.22,.9,.34,1);
+  will-change: transform;
+  box-sizing: content-box;
+}
+
+.testimoniales .mid .carrusel .top {
+  width: 75%;
+  height: 165px;
+  background: linear-gradient(135deg, #F4CB29, #E94A31, #C64191, #00A9BC, #03A85F);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.testimoniales .mid .carrusel .top img {
+  object-fit: cover;
+  padding-top: 3px;
+}
+
+.testimoniales .mid .carrusel .bot {
+  width: 100%;
+  padding-top: 12px;
+  text-align: center;
+}
+.testimoniales .mid .carrusel .bot p {
+  margin: 0;
+  color: #808080;
+  font-size: 17px;
+}
+.testimoniales .mid .carrusel .bot span {
+  font-weight: bold;
+  color: #555;
+}
+.testimoniales .mid .carrusel .slide_activo {
+  opacity: 1;
+  filter: blur(0);
+  z-index: 10;
+}
+.testimoniales .mid .carrusel .slide_activo .top img {
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+/* indicadores */
+.testimoniales .bot {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
+}
+.testimoniales .bot .indicadores {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.testimoniales .bot .indicadores .punto {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #bbb;
+  cursor: pointer;
+  transition: transform .18s ease, background .18s ease;
+}
+.testimoniales .bot .indicadores .punto:hover {
+  transform: scale(1.25);
+  background: #999;
+}
+.testimoniales .bot .indicadores .punto.activo {
+  background: #000;
+  transform: scale(1.3);
+}
 
 
 
 
 
 
-.seccionguia-general{
+
+
+
+
+
+/*                                SECCIÓN DE GUÍA / TARJETAS                                   */
+
+/* Contenedor principal de la sección */
+.seccionguia-general {
   background: #ffffff;
   color: #000000;
   padding: 50px;
@@ -240,7 +395,9 @@ body {
   gap: 20px;                  
   max-width: 100%;   
 }
-.seccionguia-general .top{
+
+/* Encabezado superior */
+.seccionguia-general .top {
   display: flex;
   justify-content: center;    
   z-index: 1000;
@@ -248,26 +405,36 @@ body {
   gap: 175px;                  
   max-width: 100%;
 }
-.seccionguia-general .top .texto{
+
+/* Texto principal del encabezado */
+.seccionguia-general .top .texto {
   font-size: 2.6rem;
   line-height: 1.2;
   max-width: fit-content;
 }
-.seccionguia-general .top .texto p{
+
+/* Párrafo destacado */
+.seccionguia-general .top .texto p {
   font-weight: bold;
 }
-.seccionguia-general .top img{
+
+/* Imagen del encabezado */
+.seccionguia-general .top img {
   margin-top: 5%;
   height: 60px;
 }
-.seccionguia-general .mid{
+
+/* Cuerpo con tarjetas */
+.seccionguia-general .mid {
   display: grid;
   grid-template-columns: repeat(3, 225px); 
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
 }
-.seccionguia-general .mid .cuadro-oscuro{
+
+/* Tarjeta oscura con borde de color */
+.seccionguia-general .mid .cuadro-oscuro {
   background: #000000; 
   color: #ffffff;
   position: relative;
@@ -281,7 +448,9 @@ body {
   overflow: hidden;
   z-index: 0;
 }
-.seccionguia-general .mid .cuadro-oscuro::before{
+
+/* Efecto de borde degradado decorativo */
+.seccionguia-general .mid .cuadro-oscuro::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -295,7 +464,9 @@ body {
   -webkit-mask-composite: xor;
           mask-composite: exclude;
 }
-.seccionguia-general .mid .cuadro-claro{
+
+/* Tarjeta clara sin borde */
+.seccionguia-general .mid .cuadro-claro {
   background: #EBEBEB;
   color: #000000;
   position: relative;
@@ -311,6 +482,8 @@ body {
   overflow: hidden;
   z-index: 0;
 }
+
+/* Títulos grandes dentro de las tarjetas */
 .seccionguia-general .mid h2 {
   font-size: 4rem;
   margin: 10px 0;
@@ -319,6 +492,8 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* Texto descriptivo de las tarjetas */
 .seccionguia-general .mid p {
   font-size: 1rem;
   line-height: 1.4;
@@ -327,6 +502,8 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* Imagen dentro de las tarjetas */
 .seccionguia-general .mid img {
   width: 50%;        
   max-width: 100px;  
@@ -335,6 +512,8 @@ body {
   margin: 0 auto 15px auto;
   display: block;
 }
+
+/* Ícono decorativo superior izquierdo */
 .seccionguia-general .mid .icono {
   position: absolute;
   top: 10px;
@@ -362,19 +541,19 @@ body {
   justify-content: center;
   align-items: center;    
 }
-.secciondatos .contenedor {
+.secciondatos .container {
   position: relative;  
   flex-direction: column;     
   max-width: 900px;
   width: 100%;
 }
-.secciondatos .contenedor img {
+.secciondatos .container img {
   display: block;  
   max-width: 100%; 
   height: auto;
   border-radius: 30px;
 }
-.secciondatos .contenedor .overlay {
+.secciondatos .container .overlay {
   position: absolute;
   color: #ffffff;
   top: 0;
@@ -387,7 +566,7 @@ body {
   padding-top: 2.5%;
   gap: 20px;             
 }
-.secciondatos .contenedor .top .texto {
+.secciondatos .container .top .texto {
   margin-top: 5%;
   color: #CFCFCF;
   font-size: 2.2rem;
@@ -395,19 +574,19 @@ body {
   white-space: nowrap;
   text-align: center;
 }
-.secciondatos .contenedor .mid,
-.secciondatos .contenedor .bot {
+.secciondatos .container .mid,
+.secciondatos .container .bot {
   margin-top: 5%;
   display: flex;
   gap: 5px;
 }
-.secciondatos .contenedor .mid {
+.secciondatos .container .mid {
   justify-content: center;
   align-items: flex-start;
   max-width: 900px;
   width: 100%;
 }
-.secciondatos .contenedor .mid .left {
+.secciondatos .container .mid .left {
   color: #ffffff;
   margin-left: 15%;
   font-size: 3rem;
@@ -415,18 +594,18 @@ body {
   line-height: 1.2;
   width: 90%;
 }
-.secciondatos .contenedor .mid .right {
+.secciondatos .container .mid .right {
   color: #ffffff;
   margin-right: 15%;
   font-size: 0.9rem;
   line-height: 1.6;
   position: relative;
 }
-.secciondatos .contenedor .mid .right img{
+.secciondatos .container .mid .right img{
   margin-top: 5%;
   height: 50px;
 }
-.secciondatos .contenedor .bot {
+.secciondatos .container .bot {
   background-color: #ffffff;
   border-radius: 20px;
   justify-content: left;
@@ -435,41 +614,41 @@ body {
   width: 35%;
   gap: 10px;
 }
-.secciondatos .contenedor .bot .titulo {
+.secciondatos .container .bot .titulo {
   display: flex;   
   align-items: center;
   margin-left: 6%;
   gap: 10px;
   margin-top: 10%;
 }
-.secciondatos .contenedor .bot .icono {
+.secciondatos .container .bot .icono {
   font-size: 30px;
   color: #ffd23f;
 }
-.secciondatos .contenedor .bot p {
+.secciondatos .container .bot p {
   font-size: 20px;
   width: fit-content;
   color: #00000f;
 }
-.secciondatos .contenedor .bot .lista {
+.secciondatos .container .bot .lista {
   list-style: none;
   margin-top: -5%;
   width: 100%;
   margin-left: 0%;
 }
-.secciondatos .contenedor .bot .lista li {
+.secciondatos .container .bot .lista li {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 5%;
   margin-bottom: 5%;
 }
-.secciondatos .contenedor .bot .lista img {
+.secciondatos .container .bot .lista img {
   width: 15px;          
   height: 15px;
   border-radius: 0px;
 }
-.secciondatos .contenedor .bot .lista span {
+.secciondatos .container .bot .lista span {
   font-size: 1rem;
   color: #555;
 }
@@ -550,7 +729,7 @@ body {
 
 
 
-.Portafolio{
+.portafolio{
   background: #000000;
   color: #ffffff;
   margin-top: 75px;
@@ -561,23 +740,24 @@ body {
   flex-direction: column;     
   justify-self: center;
   width: 100%;
-  max-width: 1500px;
+  max-width: 1200px;
+  border-radius: 10px;
 }
-.Portafolio .Top{
+.portafolio .top{
   margin: 0px;
 }
-.Portafolio .Top .titulo{  
+.portafolio .top .titulo{  
   font-size: 40px;
   margin: 50px;
   margin-bottom: 0px;
 }
-.Portafolio .Top .texto{
+.portafolio .top .texto{
   font-size: 20px;
   margin: 15px;
   margin-bottom: 0px;
   color: #808080;
 }
-.Portafolio .Mid .container{
+.portafolio .mid .container{
   background: #000000;
   color: #ffffff;
   text-align: center;
@@ -586,15 +766,15 @@ body {
   justify-self: center;
   gap: 60%;
 }
-.Portafolio .Mid .container .Imagen-izquierda,
-.Portafolio .Mid .container .Imagen-derecha{
+.portafolio .mid .container .imagen-izquierda,
+.portafolio .mid .container .imagen-derecha{
   width: 12.5%;
 }
-.Portafolio .Mid .container .Imagen-izquierda img,
-.Portafolio .Mid .container .Imagen-derecha img{
+.portafolio .mid .container .imagen-izquierda img,
+.portafolio .mid .container .imagen-derecha img{
   width: 100%;
 }
-.Portafolio .Bot .container {
+.portafolio .bot .container {
   margin: 5% 0;
   background: #000000;
   color: #ffffff;
@@ -604,9 +784,9 @@ body {
   align-items: center;
   gap: 1%;
 }
-.Portafolio .Bot .container .izquierda,
-.Portafolio .Bot .container .centro,
-.Portafolio .Bot .container .derecha {
+.portafolio .bot .container .izquierda,
+.portafolio .bot .container .centro,
+.portafolio .bot .container .derecha {
   background: #000000;
   color: #ffffff;
   display: flex;
@@ -621,31 +801,31 @@ body {
   cursor: pointer;
   position: relative;
 }
-.Portafolio .Bot .container img {
+.portafolio .bot .container img {
   width: 100%;
   transition: inherit;
   border-radius: 8px;
 }
-.Portafolio .Bot .container .izquierda:hover,
-.Portafolio .Bot .container .centro:hover,
-.Portafolio .Bot .container .derecha:hover {
+.portafolio .bot .container .izquierda:hover,
+.portafolio .bot .container .centro:hover,
+.portafolio .bot .container .derecha:hover {
   transform: scale(1.1);
   z-index: 10;
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
 }
-.Portafolio .Bot .container:hover .izquierda,
-.Portafolio .Bot .container:hover .centro,
-.Portafolio .Bot .container:hover .derecha {
+.portafolio .bot .container:hover .izquierda,
+.portafolio .bot .container:hover .centro,
+.portafolio .bot .container:hover .derecha {
   filter: brightness(0.5);
   transform: scale(0.95);
 }
-.Portafolio .Bot .container .izquierda:hover,
-.Portafolio .Bot .container .centro:hover,
-.Portafolio .Bot .container .derecha:hover {
+.portafolio .bot .container .izquierda:hover,
+.portafolio .bot .container .centro:hover,
+.portafolio .bot .container .derecha:hover {
   filter: brightness(1);
   transform: scale(1.1);
 }
-.Portafolio .Bot .container img{
+.portafolio .bot .container img{
   width: 100%;
 }
 
@@ -1164,7 +1344,7 @@ footer .menu-center a {
   color: #808080;
   text-decoration: none;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 15px;
   transition: color 0.3s ease;
   display: flex;
   align-items: end;    

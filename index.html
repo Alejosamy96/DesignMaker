@@ -9,19 +9,23 @@
 </head>
 
 <body>
+  <!-- Encabezado con el menú, dividido en 3 secciones distintas para mayor orden-->
   <header class="menu">
+      <!--Seccion izquierda con el logo-->
     <div class="menu-left">
       <img src="IMG/Logo.png" alt="LogoEmpresa">
     </div>
+      <!--Seccion central con el menú de recorrido-->
     <nav class="menu-center">
       <ul>
         <li><a href="#datacentral">Soluciones</a></li>
-        <li><a href="Colaboraciones.html">Testimoniales</a></li>
+        <li><a href="#testimoniales">Testimoniales</a></li>
         <li><a href="#seccion-quienes-somos">Nosotros</a></li>
-        <li><a href="#Portafolio">Portafolio</a></li>
+        <li><a href="#portafolio">portafolio</a></li>
         <li><a href="#seccion-bono-exclusivo">Promo</a></li>
       </ul>
     </nav>
+      <!--Seccion derecha con el botón de whatsapp (funcional)-->
     <div class="menu-right">
       <a href="https://wa.me/573112171450?text=Hola%2C%20Quiero%20mejorar%20mi%20marca" target="_blank">
         <img src="IMG/¿Chateamos (1).png" alt="whatsappChat">
@@ -30,22 +34,23 @@
   </header>
 
   <main class="contenido">
-
+  <!--Seccion con las referencias visuales, igualmente dividido, usando una imagen como fondo-->
     <section class="datacentral" id="datacentral">
       <img src="IMG/Fondo_Curvo.png" alt="Fondo" class="fondo">
+        <!--Seccion de arriba, que contiene los textos divididos en derecha e izquierda-->
       <div class="top">
         <div class="left">
           Tu marca merece más que estar en un aviso
         </div>
         <div class="right">
-          En 48 horas te entregamos un manual de marca express, 
-          con aplicaciones reales de tu logo, colores y maquetas listas para usar. 
+          En 48 horas te entregamos un manual de marca express,con aplicaciones reales de tu logo, colores y maquetas listas para usar. 
           Sin cambiar tu logo. Solo potenciando tu marca.<br>
           <a href="https://wa.me/573112171450?text=Hola%2C%20Quiero%20mejorar%20mi%20marca" target="_blank">
             <img src="IMG/Compra Ahora.png">
           </a>
         </div>
       </div>
+        <!--Por facilidad y practicidad, las imágenes se distribuyen con contenedores en la seccion de mis-->
       <div class="mid">
         <div class="left">
           <img src="IMG/Cont_izq1.png">
@@ -54,21 +59,16 @@
           <img src="IMG/Cont_der1.png">
         </div>
       </div>
+        <!--Simplemente la imagen central :P-->
       <div class="bot">
         <img src="IMG/CasosExito.png">
       </div>
     </section>
 
 
-
-
-
-
-
-
-
-    
+      <!--Sección con un grid para orden, lo más dificil fueron las berracas cajas-->
     <section class="seccionguia-general" id="seccionguia-general">
+        <!--Simplemente información de texto, derecha e izquierda usando caracteristicas en css-->
       <div class="top">
         <div class="texto">
           Tu manual de marca 
@@ -82,6 +82,7 @@
           </a>
         </div>
       </div>
+        <!--Aquí es donde está el grid, 3*2, 3 columnas 2 filas con un orden maravilloso (me enorgullece)-->
       <div class="mid">
         <div class="cuadro-oscuro">
           <div class="icono">+</div>
@@ -116,9 +117,20 @@
       </div>
     </section>
 
+
+
+
+
+
+
+
+
+
+
+
     <section class="secciondatos" id="secciondatos">
-      <div class="contenedor">
-      <img src="IMG/Fondo_principal.png" alt="Imagen de Fondo">
+      <div class="container">
+      <img src="IMG/Fondo_principal.png" alt="imagen de Fondo">
         <div class="overlay">
           <div class="top">
             <div class="texto">
@@ -212,8 +224,8 @@
       </div>
     </section>
 
-    <section class="Portafolio" id="Portafolio">
-      <div class="Top">
+    <section class="portafolio" id="portafolio">
+      <div class="top">
         <div class="container">
           <div class="top">
             <div class="titulo">
@@ -226,35 +238,35 @@
           </div>
         </div>
       </div>
-      <div class="Mid">
+      <div class="mid">
         <div class="container">
-          <div class="Imagen-izquierda">
+          <div class="imagen-izquierda">
             <img src="IMG/120_Marcas.png">
           </div>
-          <div class="Imagen-derecha">
+          <div class="imagen-derecha">
             <img src="IMG/Calificacion_5.png">
           </div>
         </div>
       </div>
-      <div class="Bot">
+      <div class="bot">
         <div class="container">
           <div class="izquierda">
             <div class="imagen">
-              <a href="">
+              <a href="" target="_blank">
                 <img src="IMG/Carrusel_3.png">
               </a>
             </div>
           </div>
           <div class="centro">
             <div class="imagen">
-              <a href="">
+              <a href="" target="_blank">
                 <img src="IMG/Carrusel_1.png">
               </a>
             </div>
           </div>
           <div class="derecha">
             <div class="imagen">
-              <a href="">
+              <a href="" target="_blank">
                 <img src="IMG/Carrusel_2.png">
               </a>
             </div>
@@ -465,11 +477,11 @@
       </div>
       <nav class="menu-center">
         <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="Colaboraciones.html">Colab</a></li>
-          <li><a href="Acerca_De.html">Acerca de</a></li>
-          <li><a href="Proyectos.html">Proyectos</a></li>
-          <li><a href="index-En.html">EN</a></li>
+          <li><a href="#datacentral" >Soluciones</a></li>
+          <li><a href="#testumoniales">Testimoniales</a></li>
+          <li><a href="#seccion-quienes-somos">Nosotros</a></li>
+          <li><a href="#portafolio">Portafolio</a></li>
+          <li><a href="#seccion-bono-exclusivo">Promo</a></li>
         </ul>
       </nav>
       <div class="menu-right">
@@ -483,8 +495,11 @@
       <p>Copyright © 2025 All rights reserved</p>
     </div>
   </footer>
+
 <script src="JS/script-Slides.js"></script>
 <script src="JS/Script-Q&A.js"></script>
 <script src="JS/Script-Temporizador.js"></script>
+<script src="JS/Script-Testimoniales.js"></script>
+<script src="JS/Script-Portafolio.js"></script>
 </body>
 </html>
