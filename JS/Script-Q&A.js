@@ -2,6 +2,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const items = document.querySelectorAll(".conjunto-container");
   const QYAcontainer = document.querySelector(".QYA .QYA-container");
 
+  // Función para obtener el margen correcto según el tamaño de pantalla
+  function getMargenes() {
+    if (window.innerWidth <= 800) {
+      return {
+        cerrado: "-140px",   // el que pusiste en CSS responsive
+        abierto: "-140px"    // un poco menos para evitar cortes
+      };
+    } else {
+      return {
+        cerrado: "-260px",   // valor de escritorio
+        abierto: "-210px"
+      };
+    }
+  }
+
+  function actualizarMargen(algunoActivo) {
+    const margenes = getMargenes();
+    QYAcontainer.style.marginBottom = algunoActivo
+      ? margenes.abierto
+      : margenes.cerrado;
+  }
+
   items.forEach((item) => {
     const preguntaContainer = item.querySelector(".pregunta-container");
     const respuestaContainer = item.querySelector(".respuesta-container");
@@ -27,24 +49,23 @@ document.addEventListener("DOMContentLoaded", () => {
         algunoActivo = true;
       }
 
-      // Ajustar margen inferior del contenedor
-      if (algunoActivo) {
-        QYAcontainer.style.marginBottom = "-210px"; // lo ajustas según lo que necesites
-      } else {
-        QYAcontainer.style.marginBottom = "-260px"; // valor original que tienes en tu CSS
-      }
+      actualizarMargen(algunoActivo);
     });
   });
 
+  // Ajuste automático al cambiar tamaño de pantalla
   window.addEventListener("resize", () => {
+    let algunoActivo = false;
+
     items.forEach((item) => {
       if (item.classList.contains("activo")) {
+        algunoActivo = true;
         const respuesta = item.querySelector(".respuesta");
         const respuestaContainer = item.querySelector(".respuesta-container");
-        if (respuesta && respuestaContainer) {
-          respuestaContainer.style.maxHeight = respuesta.scrollHeight + "px";
-        }
+        respuestaContainer.style.maxHeight = respuesta.scrollHeight + "px";
       }
     });
+
+    actualizarMargen(algunoActivo);
   });
 });

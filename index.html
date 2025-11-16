@@ -9,11 +9,19 @@
 <body>
   <!-- Encabezado con el menú, dividido en 3 secciones distintas para mayor orden-->
   <header class="menu">
-      <!--Seccion izquierda con el logo-->
+    <!--Seccion izquierda con el logo-->
     <div class="menu-left">
       <a href="index.html"><img src="IMG/Logo.png" alt="LogoEmpresa"></a>
     </div>
-      <!--Seccion central con el menú de recorrido-->
+
+    <!-- Botón hamburguesa -->
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!--Seccion central con el menú de recorrido-->
     <nav class="menu-center">
       <ul>
         <li><a href="#datacentral">Soluciones</a></li>
@@ -23,13 +31,15 @@
         <li><a href="#seccion-bono-exclusivo">Promo</a></li>
       </ul>
     </nav>
-      <!--Seccion derecha con el botón de whatsapp (funcional)-->
+
+    <!--Seccion derecha con el botón de whatsapp-->
     <div class="menu-right">
       <a href="https://wa.me/573112171450?text=Hola%2C%20Quiero%20mejorar%20mi%20marca" target="_blank">
         <img src="IMG/¿Chateamos (1).png" alt="whatsappChat">
       </a>
     </div>
   </header>
+
 
   <main class="contenido">
     <!-- Sección principal con referencias visuales y fondo decorativo -->
@@ -619,6 +629,15 @@
   <script src="JS/Script-Q&A.js"></script>
   <script src="JS/Script-Temporizador.js"></script>
   <script src="JS/Script-Portafolio.js"></script>
+  <script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.menu-center');
+
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+    nav.classList.toggle('active');
+  });
+  </script>
 </body>
 </html>
 
