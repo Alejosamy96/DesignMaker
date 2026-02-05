@@ -100,6 +100,15 @@ body {
   align-self: center;
 }
 
+/* Hover en las imagenes en el lado izquierdo */
+.menu .menu-left img:hover,
+.menu .menu-right img:hover{
+  z-index: 10;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+  filter: brightness(1.3);
+  transform: scale(1.2);
+}
+
 /* Imagen o ícono en el lado derecho */
 .menu .menu-right img {
   display: block;
@@ -227,6 +236,14 @@ body {
 .datacentral .top .right img {
   margin-top: 5%;
   height: 50px;
+}
+
+/* Hover dentro del lado derecho superior */
+.datacentral .top .right img:hover{
+  z-index: 10;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+  filter: brightness(1.3);
+  transform: scale(1.2);
 }
 
 /* Parte media de la portada */
@@ -504,8 +521,8 @@ body {
   pointer-events: none;
   background: linear-gradient(135deg, #F4CB29, #E94A31, #C64191, #00A9BC, #03A85F);
   -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
+    linear-gradient(#fff 0%, #fff 100%) content-box,
+    linear-gradient(#fff 0%, #fff 100%);
   -webkit-mask-composite: xor;
           mask-composite: exclude;
 }
@@ -1107,8 +1124,8 @@ body {
   padding: 5px; 
   background: linear-gradient(135deg, #F4CB29, #E94A31, #C64191, #00A9BC, #03A85F);
   -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
+    linear-gradient(#fff 0%,#fff 100%) content-box, 
+    linear-gradient(#fff 0%,#fff 100%);
   -webkit-mask-composite: xor;
           mask-composite: exclude;
 }
@@ -1317,8 +1334,8 @@ body {
   padding: 5px; 
   background: linear-gradient(135deg, #F4CB29, #E94A31, #C64191, #00A9BC, #03A85F);
   -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
+    linear-gradient(#fff 0%,#fff 100%) content-box, 
+    linear-gradient(#fff 0%,#fff 100%);
   -webkit-mask-composite: xor;
           mask-composite: exclude;
 }
